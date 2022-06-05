@@ -26,6 +26,8 @@
 
 .new-cost__actions {
   text-align: left;
+  display: flex;
+  gap: 20px;
 }
 
 .new-cost__actions button {
@@ -37,6 +39,7 @@
   font-weight: 900;
   color: white;
   transition: 0.5s;
+  
 }
 
 .new-cost__actions button:hover {

@@ -25,6 +25,7 @@ const INITIAL_COSTS = [
 
 const App = () => {
   const [costs, setCosts] = useState(INITIAL_COSTS);
+  const [buttonLock, setButtonLock] = useState(false)
 
 
 
@@ -42,7 +43,7 @@ const App = () => {
 
   return (
     <div>
-      <NewCost addComponent={addCostHendler} />
+      {buttonLock ? <NewCost onChangeButton={() => setButtonLock(false)} addComponent={addCostHendler} /> : <button className="btnApp" onClick={() => setButtonLock(true)}>Add new COST</button>}
       <Costs costs={costs} />
     </div>
   );

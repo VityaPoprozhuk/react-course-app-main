@@ -6,7 +6,7 @@ const CostForm = (props) => {
   const [inputName, setInputName] = useState("");
   const [inputSum, setInputSum] = useState("");
   const [inputDate, setInputDate] = useState("");
-  const [buttonVisible, setButtonVisible] = useState(false);
+
 
   const nameChangeHendler = (event) => {
     setInputName(event.target.value);
@@ -17,6 +17,10 @@ const CostForm = (props) => {
   const dateChangeHendler = (event) => {
     setInputDate(event.target.value);
   };
+
+  const onCHangeButton = () => {
+    props.onChangeButton()
+  }
 
   const submitHendler = (event) => {
     event.preventDefault();
@@ -33,7 +37,7 @@ const CostForm = (props) => {
     setInputSum("");
     setInputDate("");
 
-    setButtonVisible(true)
+
 
   };
 
@@ -68,6 +72,8 @@ const CostForm = (props) => {
         </div>
         <div className="new-cost__actions">
           <button type="submit">Добавить расход</button>
+          <button type="button" onClick={onCHangeButton}>Отмена</button>
+
         </div>
       </div>
     </form>
