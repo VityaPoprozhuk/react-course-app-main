@@ -4,6 +4,9 @@
   gap: 1rem;
   margin-bottom: 1rem;
   text-align: left;
+  padding: 15px 20px;
+  background-color: #aac4d1;
+  border-radius: 10px;
 }
 
 .new-cost__control label {
@@ -25,21 +28,20 @@
   text-align: left;
 }
 
-.new-cost__actions button{
+.new-cost__actions button {
   border: none;
   width: 200px;
   height: 40px;
   border-radius: 10px;
   background-color: #2a5b84;
   font-weight: 900;
-color: white;
-transition: .5s;
+  color: white;
+  transition: 0.5s;
 }
 
-.new-cost__actions button:hover{
+.new-cost__actions button:hover {
   background-color: #5b93c2;
 }
-.new-cost__actions button:active{
-  
+.new-cost__actions button:active {
   transform: scale(0.98);
 }

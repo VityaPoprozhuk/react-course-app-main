@@ -4,15 +4,17 @@ import "./CostItem.css";
 
 const CostItem = (props) => {
   return (
-    <Card className="cost-item">
-      <CostDate date={props.date} />
-      <div>
-        <div className="cost-item__description">
-          <h2>{props.description}</h2>
-          <div className="cost-item__price">${props.price}</div>
+    <li>
+      <Card className="cost-item">
+        <CostDate date={props.date} />
+        <div>
+          <div className="cost-item__description">
+            <h2>{props.description}</h2>
+            <div className="cost-item__price">${props.price}</div>
+          </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </li>
   );
 };
 

@@ -42,7 +42,6 @@ const App = () => {
 
   return (
     <div>
-      <h1>Начнем изучение реакт</h1>
       <NewCost addComponent={addCostHendler} />
       <Costs costs={costs} />
     </div>

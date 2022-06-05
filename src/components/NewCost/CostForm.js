@@ -6,6 +6,7 @@ const CostForm = (props) => {
   const [inputName, setInputName] = useState("");
   const [inputSum, setInputSum] = useState("");
   const [inputDate, setInputDate] = useState("");
+  const [buttonVisible, setButtonVisible] = useState(false);
 
   const nameChangeHendler = (event) => {
     setInputName(event.target.value);
@@ -27,13 +28,18 @@ const CostForm = (props) => {
     };
 
 
-props.onSaveCostData(data)
+    props.onSaveCostData(data)
     setInputName("");
     setInputSum("");
     setInputDate("");
+
+    setButtonVisible(true)
+
   };
 
   return (
+
+
     <form onSubmit={submitHendler}>
       <div className="new-cost__controls">
         <div className="new-cost__control">
