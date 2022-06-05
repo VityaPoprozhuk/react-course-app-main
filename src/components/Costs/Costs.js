@@ -5,17 +5,34 @@ import "./Costs.css";
 import CostsFilter from "./CostsFilter";
 
 const Costs = (props) => {
-  const [selectedYear, setSelectedYear] = useState("2021");
+  const [selectedYear, setSelectedYear] = useState(2021);
 
   const changeYears = (year) => {
+
     setSelectedYear(year);
   };
+
+  console.log(typeof selectedYear);
+
+
+
+  const filterArr = props.costs.filter((cost) =>
+
+    cost.date.getFullYear() === parseInt(selectedYear)
+
+
+  )
+  console.log(filterArr)
+
+
+
+
   return (
     <div>
       <Card className="costs">
         <CostsFilter year={selectedYear} onChangeYear={changeYears} />
 
-        {props.costs.map((cost) => (
+        {filterArr.map((cost) => (
           <CostItem
             key={cost.id}
             date={cost.date}

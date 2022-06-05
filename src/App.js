@@ -5,13 +5,13 @@ import NewCost from "./components/NewCost/NewCost";
 const INITIAL_COSTS = [
   {
     id: "c1",
-    date: new Date(2021, 2, 12),
+    date: new Date(2020, 2, 12),
     description: "Холодильник",
     price: 900,
   },
   {
     id: "c2",
-    date: new Date(2021, 8, 13),
+    date: new Date(2022, 8, 13),
     description: "Iphone",
     price: 1200,
   },
@@ -26,11 +26,19 @@ const INITIAL_COSTS = [
 const App = () => {
   const [costs, setCosts] = useState(INITIAL_COSTS);
 
+
+
+
+
   const addCostHendler = (cost) => {
     setCosts((prevCosts) => {
       return [cost, ...costs];
     });
   };
+
+  // filter((year) => year.date.getFullYear() === selectedYear)
+
+
 
   return (
     <div>
