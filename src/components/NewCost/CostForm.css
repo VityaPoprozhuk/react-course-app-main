@@ -24,3 +24,22 @@
 .new-cost__actions {
   text-align: left;
 }
+
+.new-cost__actions button{
+  border: none;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #2a5b84;
+  font-weight: 900;
+color: white;
+transition: .5s;
+}
+
+.new-cost__actions button:hover{
+  background-color: #5b93c2;
+}
+.new-cost__actions button:active{
+  
+  transform: scale(0.98);
+}
