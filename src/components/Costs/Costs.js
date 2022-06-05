@@ -5,7 +5,7 @@ import "./Costs.css";
 import CostsFilter from "./CostsFilter";
 
 const Costs = (props) => {
-  const [selectedYear, setSelectedYear] = useState(2021);
+  const [selectedYear, setSelectedYear] = useState(2019);
 
   const changeYears = (year) => {
     setSelectedYear(year);
@@ -19,7 +19,7 @@ const Costs = (props) => {
     <div>
       <Card className="costs">
         <CostsFilter year={selectedYear} onChangeYear={changeYears} />
-
+        {filterArr.length === 0 && <p>There are no expenses this year</p>}
         {filterArr.map((cost) => (
           <CostItem
             key={cost.id}
@@ -28,6 +28,7 @@ const Costs = (props) => {
             price={cost.price}
           />
         ))}
+
       </Card>
     </div>
   );

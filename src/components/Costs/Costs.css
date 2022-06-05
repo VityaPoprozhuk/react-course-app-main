@@ -4,5 +4,14 @@
   margin: 2rem auto;
   width: 70rem;
   max-width: 95%;
-  
+}
+
+.costs p {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #000000;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
