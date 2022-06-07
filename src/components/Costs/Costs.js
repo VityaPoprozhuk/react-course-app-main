@@ -11,19 +11,15 @@ const Costs = (props) => {
     setSelectedYear(year);
   };
 
-  const filterArr = props.costs.filter((cost) =>
-    cost.date.getFullYear() === parseInt(selectedYear)
-  )
-
-
-
+  const filterArr = props.costs.filter(
+    (cost) => cost.date.getFullYear() === parseInt(selectedYear)
+  );
 
   return (
     <div>
       <Card className="costs">
         <CostsFilter year={selectedYear} onChangeYear={changeYears} />
         <CostList costs={filterArr} />
-
       </Card>
     </div>
   );

@@ -25,11 +25,7 @@ const INITIAL_COSTS = [
 
 const App = () => {
   const [costs, setCosts] = useState(INITIAL_COSTS);
-  const [buttonLock, setButtonLock] = useState(false)
-
-
-
-
+  const [buttonLock, setButtonLock] = useState(false);
 
   const addCostHendler = (cost) => {
     setCosts((prevCosts) => {
@@ -39,11 +35,18 @@ const App = () => {
 
   // filter((year) => year.date.getFullYear() === selectedYear)
 
-
-
   return (
     <div>
-      {buttonLock ? <NewCost onChangeButton={() => setButtonLock(false)} addComponent={addCostHendler} /> : <button className="btnApp" onClick={() => setButtonLock(true)}>Add new COST</button>}
+      {buttonLock ? (
+        <NewCost
+          onChangeButton={() => setButtonLock(false)}
+          addComponent={addCostHendler}
+        />
+      ) : (
+        <button className="btnApp" onClick={() => setButtonLock(true)}>
+          Add new COST
+        </button>
+      )}
       <Costs costs={costs} />
     </div>
   );
