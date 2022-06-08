@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CostsDiagram from "../Diagram/Diagram";
+import CostsDiagram from "./CostsDiagram";
 import Card from "../UI/Card";
 import CostList from "./CostList";
 import "./Costs.css";

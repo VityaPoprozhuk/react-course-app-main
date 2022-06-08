@@ -1,5 +1,4 @@
 import Diagram from "../Diagram/Diagram";
-
 const CostsDiagram = (props) => {
   const diagramDataSets = [
     { label: "Jan", value: 0 },
@@ -15,13 +14,13 @@ const CostsDiagram = (props) => {
     { label: "Nov", value: 0 },
     { label: "Dec", value: 0 },
   ];
+  console.log(diagramDataSets);
 
   for (const cost of props.costs) {
     const costMonth = cost.date.getMonth();
-    diagramDataSets[costMonth].value += cost.amount;
+    diagramDataSets[costMonth].value += cost.price;
   }
-  return 1;
-  // return <Diagram dataSets={diagramDataSets} />;
+  return <Diagram dataSets={diagramDataSets} />;
 };
 
 export default CostsDiagram;
